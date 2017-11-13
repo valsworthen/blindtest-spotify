@@ -39,10 +39,10 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo"/>
-          <h1 className="App-title">Bienvenue sur le Blindtest</h1>
+          <h1 className="App-title">Welcome to blindtest -burp- Morty</h1>
         </header>
         <div className="App-images">
-          <p>Il va falloir modifier le code pour faire un vrai Blindtest !</p>
+          <p>Youre gonna need to make some modifications Morty</p>
         </div>
         <div className="App-buttons">
         </div>
