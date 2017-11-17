@@ -7,7 +7,7 @@ import './App.css';
 import Sound from 'react-sound';
 import Button from './Button';
 
-const apiToken = 'BQAsFoqmMQESx0w81LL_u61uv3P89gq18ciNENnF3ljUyQVwNeixA6Jxy9pHThGsX_n1QV4WAFzxOrs4SMg_jBB5uAV5fd3npduwU-4EUoG4BN8Cmyej4qnXDHZvXOmJaME78Q3og5D8-zduEeV-K4A';
+const apiToken = 'BQBe0ST5RIdXRiHuIRcUrc7YLaRtVMPeGTUo2vtoqG-N2q2kG6rA0eTGKEFawYgDZepcJlHuDg7m8zwZVBPf2e_x7GVIQdXsLqFAxDmjfB1LbfhGiRFNx959497kqwvt7G95i3-BiipbHbiJzV9YN0-28Q';
 
 function shuffleArray(array) {
   let counter = array.length;
@@ -22,8 +22,6 @@ function shuffleArray(array) {
 
   return array;
 }
-
-
 
 /* Return a random number between 0 included and x excluded */
 function getRandomNumber(x) {
@@ -61,19 +59,21 @@ class App extends Component {
                     }), data)
       })
 
-    this.setState({
-      text : "Hi Morty !"
-    });
+      setTimeout(() => this.switchTrack(), 30000)
   }
 
   checkAnswer(id){
-    if (id == this.state.currentTrack.id){
-      swal('Bravo', '', 'success');
+    if (id === this.state.currentTrack.id){
+      swal('Bravo', '', 'success').then(this.switchTrack());
     }
 
     else {
       swal ('Faux! ', '', 'error')
     }
+  }
+
+  switchTrack(){
+    this.setState({currentTrack : this.state.tracks[getRandomNumber(20)].track})
   }
 
 

@@ -1,6 +1,13 @@
 # blindtest-spotify
 
 This is a simple demo of how to create a blindtest using Spotify and React.
+This app was created during a WebDojo organized by Theodo. Theodo provided the app structure and a tutorial.  
+
+The app is available online at 
+```https://valsworthen.github.io/blindtest-spotify
+```
+
+However, **since Spotify API keys expire after one hour** the blindtest won't work, unless you provide a new key in App.js  
 
 ## Getting started
 
